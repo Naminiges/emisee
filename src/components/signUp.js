@@ -39,7 +39,7 @@ export const SignUp = () => {
       <form onSubmit={signUp}>
         <table>
           <tr>
-            <td>Masukkan Nama Email</td>
+            <td>Masukkan Nama Email kamu</td>
             <td> : </td>
             <td>
               <input
