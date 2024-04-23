@@ -1,10 +1,10 @@
-import { auth, googleProvider } from "../config/firebase";
+import { auth, googleProvider } from "../../config/firebase";
 
 import { useNavigate } from "react-router-dom";
 import { signInWithPopup } from "firebase/auth";
-import './style.css';
+import './loginRegister.css';
 
-import googleLogo from "../image/7123025_logo_google_g_icon.svg"
+import googleLogo from "../../image/7123025_logo_google_g_icon.svg"
 
 export const Index = () => {
   const navigate = useNavigate();
@@ -62,7 +62,8 @@ export const Index = () => {
             </div>
             <div class="login">
               <p>Already have an account?</p>
-              <button class="signup" type="submit">
+              <button class="signup" type="submit"
+              onClick={() => navigate("/login")}>
                 Login
               </button>
             </div>

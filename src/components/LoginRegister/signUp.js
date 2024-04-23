@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { auth, googleProvider } from "../config/firebase";
+import { auth, googleProvider } from "../../config/firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import googleLogo from "../image/7123025_logo_google_g_icon.svg"
+import googleLogo from "../../image/7123025_logo_google_g_icon.svg"
+
 
 export const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -74,7 +75,7 @@ export const SignUp = () => {
               onChange={(e) => setEmail(e.target.value)}
               style={{marginBottom: "0"}}
             />
-            {emailError && <p style={{color:"red", textAlign:"left", margin:"0"}}>&nbsp;&nbsp;*{emailError}</p>}
+            {emailError && <p style={{color:"red", textAlign:"left", marginTop:"10px"}}>&nbsp;&nbsp;*{emailError}</p>}
             <p>Password</p>
             <input
                 placeholder="Password"
@@ -83,7 +84,7 @@ export const SignUp = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 style={{marginBottom: "0"}}
               />
-            {passwordError && <p style={{color:"red", textAlign:"left", marginTop:"0"}}>&nbsp;&nbsp;*{passwordError}</p>}
+            {passwordError && <p style={{color:"red", textAlign:"left", marginTop:"10px"}}>&nbsp;&nbsp;*{passwordError}</p>}
             <button class="signup" type="submit" onClick={signUp} style={{marginTop:"14px"}}>
               Sign up
             </button>
@@ -95,9 +96,7 @@ export const SignUp = () => {
 
             <div class="termofuse">
               <p>
-                By creating an account, you agree to our
-                <span class="highlighted">Terms of Use</span> and
-                <span class="highlighted">Privacy Policy</span>.
+                By creating an account, you agree to our <span class="highlighted">Terms of Use</span> and <span class="highlighted">Privacy Policy</span>.
               </p>
             </div>
           </div>

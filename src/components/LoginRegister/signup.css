@@ -4,18 +4,18 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: flex-end; /* Menggeser kontainer ke kanan */
+  justify-content: center; /* Menggeser kontainer ke kanan */
   align-items: center; /* Mengatur vertikal ke tengah */
   margin: 0; /* Menghilangkan margin bawaan */
   height: 100vh; /* Menetapkan tinggi kontainer utama */
 }
 
 .container {
-  height: 100%;
+  height: 60%;
   width: 400px;
   padding: 20px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -29,13 +29,9 @@ body {
 }
 
 .content p {
-  padding-left: 20px;
-  font-weight: bold;
-  font-size: 250%;
-}
-
-.content p .highlighted {
-  color: green; /* Menetapkan warna teks pada "emisee" menjadi hijau */
+  font-weight: 600;
+  font-size: 180%;
+  text-align: center;
 }
 
 h1 {
@@ -60,6 +56,7 @@ label {
 }
 
 input[type="text"],
+input[type="email"],
 input[type="password"] {
   width: 94%;
   padding: 10px;
@@ -84,10 +81,9 @@ input[type="password"] {
 .continuewith img {
   width: 20px; /* Menetapkan lebar maksimum untuk logo Google */
   margin-right: 8px; /* Menambahkan jarak antara logo dan teks di dalam tombol */
-
 }
 
-.signup {
+.signup, .signin {
   width: 100%;
   padding: 10px;
   background-color: black;

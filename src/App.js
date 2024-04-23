@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
-import { Auth } from "./components/auth";
-import { SignUp } from "./components/signUp";
+import { Auth } from "./components/LoginRegister/login";
+import { SignUp } from "./components/LoginRegister/signUp";
 import { Home } from "./pages/home";
-import { Index } from "./components/index";
+import { Index } from "./components/LoginRegister/loginRegister";
 
 function App() {
   return (
