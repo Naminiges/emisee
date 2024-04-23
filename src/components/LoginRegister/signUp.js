@@ -6,7 +6,7 @@ import {
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import googleLogo from "../../image/7123025_logo_google_g_icon.svg"
-
+import emiseeLogo from "../../image/logo.jpg";
 
 export const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -61,7 +61,9 @@ export const SignUp = () => {
       </head>
       <body>
         <div class="container">
-          <div class="header"></div>
+        <div class="header">
+            <img src={emiseeLogo} alt="logo" style={{ width: "200px", marginTop : "-90px", marginBottom: "-90px"}} />
+          </div>
           <div class="content">
             <p>Sign up For Free</p>
           </div>

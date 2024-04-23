@@ -3,6 +3,7 @@ import { auth, googleProvider } from "../../config/firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import googleLogo from "../../image/7123025_logo_google_g_icon.svg";
+import emiseeLogo from "../../image/logo.jpg";
 
 export const Auth = () => {
   const [email, setEmail] = useState("");
@@ -59,7 +60,9 @@ export const Auth = () => {
       </head>
       <body>
         <div class="container">
-          <div class="header"></div>
+          <div class="header">
+            <img src={emiseeLogo} alt="logo" style={{ width: "200px", marginTop : "-90px", marginBottom: "-90px"}} />
+          </div>
           <div class="content">
             <p>Login to Your Account</p>
           </div>
