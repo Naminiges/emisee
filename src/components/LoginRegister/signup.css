@@ -1,37 +1,43 @@
-body {
-  font-family: sans-serif;
-  background-image: url(https://img.freepik.com/free-photo/modern-podium-product-design-against-backdrop-tropical-forest_1268-31490.jpg?t=st=1713532753~exp=1713536353~hmac=da0fd95ee0d52c2db62d823bd1b3f7a85db06f7385e8738925ff17673412a1cb&w=1380);
+.background-containerlogin {
+  background-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: center; /* Menggeser kontainer ke kanan */
-  align-items: center; /* Mengatur vertikal ke tengah */
-  margin: 0; /* Menghilangkan margin bawaan */
-  height: 100vh; /* Menetapkan tinggi kontainer utama */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Untuk memastikan kontainer konten tetap di depan latar belakang */
+  font-family: 'Poppins', sans-serif;
 }
 
-.container {
-  height: 60%;
+.container-signup {
+  height: 75%;
   width: 400px;
   padding: 20px;
+  padding-top: 40px;
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: auto; /* Menengahkan kontainer secara horizontal */
+  margin-top: 5%; /* Untuk memberikan sedikit jarak dari atas */
 }
 
-/* Selector lainnya */
+
 
 .header {
   padding-left: 20px;
 }
 
-.content p {
+.content-signup p {
   font-weight: 600;
-  font-size: 180%;
-  text-align: center;
+  padding-left: 20px;
+  font-size: 200%;
+  margin-bottom: -20px;
+
 }
 
 h1 {
@@ -76,6 +82,7 @@ input[type="password"] {
   color: black;
   border-radius: 50px;
   cursor: pointer;
+  border: 1px solid #ccc;
 }
 
 .continuewith img {

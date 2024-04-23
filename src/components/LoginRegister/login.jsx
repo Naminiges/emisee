@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { auth, googleProvider } from "../../config/firebase";
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { signInWithEmailAndPassword, signInWithPopup, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import googleLogo from "../../image/7123025_logo_google_g_icon.svg";
 import emiseeLogo from "../../image/logo.jpg";
+import './login.css';
 
 export const Auth = () => {
   const [email, setEmail] = useState("");
@@ -12,58 +13,60 @@ export const Auth = () => {
   const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const currentUser = localStorage.getItem("currentUser");
+    if (currentUser) {
+      navigate("/");
+    }
+
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // Jika pengguna sudah login, arahkan mereka ke halaman beranda
+        navigate("/");
+      }
+    });
+
+    // Membersihkan listener saat komponen di-unmount
+    return () => unsubscribe();
+  }, []);
+
   const signIn = async (e) => {
     e.preventDefault();
     setEmailError("");
     setPasswordError("");
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate("/home");
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      // Simpan informasi pengguna ke dalam penyimpanan sesi
+      localStorage.setItem("currentUser", JSON.stringify(user));
+      navigate("/");
     } catch (err) {
-      if (err.code === "auth/user-not-found" || err.code === "auth/wrong-password") {
-        setEmailError("Invalid email or password");
-      } else if (err.code === "auth/invalid-credential") {
-        setPasswordError("Invalid email or password");
-      } else if (email === "") {
-        setEmailError("Email is required");
-      } else if (password === "") {
-        setPasswordError("Password is required");
-      } else if (err.code === "auth/invalid-email") {
-        setEmailError("Invalid email");
-      } else {
-        console.error(err);
-      }
+      // Tangani kesalahan saat login
+      // ...
     }
   };
-  
 
   const signInWithGoogle = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
-      navigate("/home");
+      const userCredential = await signInWithPopup(auth, googleProvider);
+      const user = userCredential.user;
+      // Simpan informasi pengguna ke dalam penyimpanan sesi
+      localStorage.setItem("currentUser", JSON.stringify(user));
+      navigate("/");
     } catch (err) {
+      // Tangani kesalahan saat login dengan Google
       console.error(err);
     }
   };
 
+
   return (
-    <html>
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Login Page</title>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <link rel="stylesheet" href="signup.css" />
-      </head>
-      <body>
-        <div class="container">
-          <div class="header">
-            <img src={emiseeLogo} alt="logo" style={{ width: "200px", marginTop : "-90px", marginBottom: "-90px"}} />
+  <div class="background-container"> {/* Kontainer untuk latar belakang */}
+        <div class="container-login">
+        <div class="header">
+            <img src={emiseeLogo} alt="logo" style={{ width: "200px", marginTop : "-90px", marginBottom: "-110px"}} />
           </div>
-          <div class="content">
+          <div class="content-login">
             <p>Login to Your Account</p>
           </div>
 
@@ -117,7 +120,6 @@ export const Auth = () => {
             </div>
           </div>
         </div>
-      </body>
-    </html>
+</div>
   );
 };

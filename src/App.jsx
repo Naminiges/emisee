@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Auth } from "./components/LoginRegister/login";
 import { SignUp } from "./components/LoginRegister/signUp";
-import { Home } from "./pages/home";
-import { Index } from "./components/LoginRegister/loginRegister";
+import { Index } from "./pages/Home/home";
+import { LoginRegister } from "./components/LoginRegister/loginRegister";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
           <Route path="/" element={<Index />}></Route>
           <Route path="/signUp" element={<SignUp />}></Route>
           <Route path="/login" element={<Auth />}></Route>
-          <Route path="/home" element={<Home />}></Route>
+          <Route path="/loginregister" element={<LoginRegister />}></Route>
         </Routes>
       </Router>
     </div>

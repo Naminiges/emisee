@@ -7,6 +7,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import googleLogo from "../../image/7123025_logo_google_g_icon.svg"
 import emiseeLogo from "../../image/logo.jpg";
+import './signUp.css'
 
 export const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -20,7 +21,7 @@ export const SignUp = () => {
     setpasswordError("");
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/home")
+      navigate("/login")
     } catch (err) {
       if (err.code === "auth/email-already-in-use") {
         setEmailError("Email already in use");
@@ -41,30 +42,19 @@ export const SignUp = () => {
   const signInWithGoogle = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
-      navigate("/home");
+      navigate("/");
     } catch (err) {
       console.error(err);
     }
   };
 
   return (
-    <html>
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Login Page</title>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <link rel="stylesheet" href="signup.css" />
-      </head>
-      <body>
-        <div class="container">
+    <div className="background-containerlogin"> {/* Kontainer untuk latar belakang */}
+        <div class="container-signup">
         <div class="header">
-            <img src={emiseeLogo} alt="logo" style={{ width: "200px", marginTop : "-90px", marginBottom: "-90px"}} />
+            <img src={emiseeLogo} alt="logo" style={{ width: "200px", marginTop : "-90px", marginBottom: "-110px"}} />
           </div>
-          <div class="content">
+          <div class="content-signup">
             <p>Sign up For Free</p>
           </div>
 
@@ -103,7 +93,6 @@ export const SignUp = () => {
             </div>
           </div>
         </div>
-      </body>
-    </html>
+    </div>
   );
 };

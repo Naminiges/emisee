@@ -1,27 +1,29 @@
-body {
-  font-family: sans-serif;
-  background-image: url(https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+
+.background-container {
+  background-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: flex-end; /* Menggeser kontainer ke kanan */
-  align-items: center; /* Mengatur vertikal ke tengah */
-  margin: 0; /* Menghilangkan margin bawaan */
-  height: 100vh; /* Menetapkan tinggi kontainer utama */
-}
-
-.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  width: 400px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  z-index: -1; /* Untuk memastikan kontainer konten tetap di depan latar belakang */
+  font-family: 'Poppins', sans-serif;
 }
 
+  .container-loginregister {
+    height: 100vh;
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto; /* Menempatkan kontainer di sebelah kanan */
+  }
 /* Selector lainnya */
 
 .header {
@@ -30,8 +32,9 @@ body {
 
 .content p {
   padding-left: 20px;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 250%;
+  padding-bottom: 20px;
 }
 
 .content p .highlighted {
@@ -80,6 +83,11 @@ input[type="password"] {
   color: black;
   border-radius: 50px;
   cursor: pointer;
+  font-weight: 500;
+}
+
+.continuewith:hover {
+  background-color: #00000009; /* Warna latar belakang tombol saat dihover */
 }
 
 .continuewith img {
@@ -96,6 +104,11 @@ input[type="password"] {
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  font-weight: lighter;
+}
+
+.signin:hover, .signup:hover {
+  background-color: #000000cc;
 }
 
 .termofuse p {
