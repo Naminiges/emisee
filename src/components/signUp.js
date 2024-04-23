@@ -10,21 +10,30 @@ import googleLogo from "../image/7123025_logo_google_g_icon.svg"
 export const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setpasswordError] = useState("");
   const navigate = useNavigate();
   const signUp = async (e) => {
     e.preventDefault();
+    setEmailError("");
+    setpasswordError("");
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      alert("Account created succesfully");
       navigate("/home")
     } catch (err) {
       if (err.code === "auth/email-already-in-use") {
-        alert("Email already in use");
+        setEmailError("Email already in use");
+      } else if (email === "") {
+        setEmailError("Email is required");
+      } else if(password === ""){
+        setpasswordError("Password is required");
+      } else if(err.code === "auth/invalid-email"){
+        setEmailError("Invalid email");
+      }  else if (err.code === "auth/weak-password") {
+        setpasswordError("Password should be at least 6 characters");
       } else {
-        alert("Email invalid");
+        console.error(err);
       }
-      console.error(err);
     }
   };
 
@@ -63,15 +72,19 @@ export const SignUp = () => {
               placeholder="Name"
               required
               onChange={(e) => setEmail(e.target.value)}
+              style={{marginBottom: "0"}}
             />
+            {emailError && <p style={{color:"red", textAlign:"left", margin:"0"}}>&nbsp;&nbsp;*{emailError}</p>}
             <p>Password</p>
             <input
                 placeholder="Password"
                 type="password"
                 required
                 onChange={(e) => setPassword(e.target.value)}
+                style={{marginBottom: "0"}}
               />
-            <button class="signup" type="submit" onClick={signUp}>
+            {passwordError && <p style={{color:"red", textAlign:"left", marginTop:"0"}}>&nbsp;&nbsp;*{passwordError}</p>}
+            <button class="signup" type="submit" onClick={signUp} style={{marginTop:"14px"}}>
               Sign up
             </button>
             <p style={{textAlign: "center"}}>or</p>
