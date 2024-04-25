@@ -117,3 +117,7 @@ a {
 .login {
   padding-top: 40px;
 }
+
+button.signin, button.signup {
+  font-weight: 300;
+}

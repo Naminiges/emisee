@@ -7,7 +7,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import googleLogo from "../../image/7123025_logo_google_g_icon.svg"
 import emiseeLogo from "../../image/logo.jpg";
-import './signup.css'
+import './signUp.css'
 
 export const SignUp = () => {
   const [email, setEmail] = useState("");

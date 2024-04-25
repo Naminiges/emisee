@@ -17,9 +17,12 @@
   .navbar-menu {
     list-style-type: none; /* Menghilangkan bullet point pada daftar menu */
     display: flex;
-    gap: 20px; /* Jarak antar item menu */
+    gap: 80px; /* Jarak antar item menu */
   }
-  
+
+  ul.navbar-menu a{
+    color: #333333;
+  }
   .navbar-menu li {
     color: #333333; /* Warna teks menu */
     font-size: 16px; /* Ukuran teks menu */
@@ -44,3 +47,9 @@
     background-color: #3a941f; /* Warna latar belakang tombol saat dihover */
   }
   
+  /* Tambahkan bagian ini untuk menyesuaikan item navbar yang aktif */
+.navbar-menu li.active {
+  font-weight: bold; /* Misalnya, membuat teks lebih tebal */
+  color: #007bff; /* Ubah warna teks untuk menunjukkan bahwa item ini adalah yang aktif */
+}
+
