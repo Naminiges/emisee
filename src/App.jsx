@@ -3,6 +3,7 @@ import { Auth } from "./components/LoginRegister/login";
 import { SignUp } from "./components/LoginRegister/signUp";
 import { Index } from "./pages/Home/home";
 import { LoginRegister } from "./components/LoginRegister/loginRegister";
+import {Kontak} from "./pages/Kontak/kontak"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/signUp" element={<SignUp />}></Route>
           <Route path="/login" element={<Auth />}></Route>
           <Route path="/loginregister" element={<LoginRegister />}></Route>
+          <Route path="/kontak" element={<Kontak />}></Route>
         </Routes>
       </Router>
     </div>
