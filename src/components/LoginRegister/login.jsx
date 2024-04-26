@@ -13,22 +13,22 @@ export const Auth = () => {
   const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const currentUser = localStorage.getItem("currentUser");
-    if (currentUser) {
-      navigate("/");
-    }
+  // useEffect(() => {
+  //   const currentUser = localStorage.getItem("currentUser");
+  //   if (currentUser) {
+  //     navigate("/");
+  //   }
 
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // Jika pengguna sudah login, arahkan mereka ke halaman beranda
-        navigate("/");
-      }
-    });
+  //   const unsubscribe = onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       // Jika pengguna sudah login, arahkan mereka ke halaman beranda
+  //       navigate("/");
+  //     }
+  //   });
 
-    // Membersihkan listener saat komponen di-unmount
-    return () => unsubscribe();
-  }, []);
+  //   // Membersihkan listener saat komponen di-unmount
+  //   return () => unsubscribe();
+  // }, []);
 
   const signIn = async (e) => {
     e.preventDefault();
@@ -41,9 +41,18 @@ export const Auth = () => {
       localStorage.setItem("currentUser", JSON.stringify(user));
       navigate("/");
     } catch (err) {
-      // Tangani kesalahan saat login
-      // ...
-    }
+      if (email === "") {
+        setEmailError("Email is required");
+      } else if(password === ""){
+        setPasswordError("Password is required");
+      } else if(err.code === "auth/invalid-email"){
+        setEmailError("Invalid email");
+      }  else if (err.code === "auth/invalid-credential") {
+        setPasswordError("Incorrect email or password");
+      } else {
+        console.error(err);
+      }
+    }
   };
 
   const signInWithGoogle = async () => {
