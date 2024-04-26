@@ -8,6 +8,7 @@
     padding: 20px; /* Ruang di sekitar konten navbar */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan di bawah navbar */
     font-family: 'Poppins', sans-serif;
+
   }
   
   .navbar img {

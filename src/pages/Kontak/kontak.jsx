@@ -1,4 +1,5 @@
 import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/footer";
 import "./kontak.css";
 export const Kontak = () => {
   return (
@@ -52,6 +53,7 @@ export const Kontak = () => {
         </div>
         <div className="footer"></div>
       </div>
+      <Footer/>
     </div>
   );
 };

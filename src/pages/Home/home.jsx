@@ -3,6 +3,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/footer";
 import './home.css'
 
 export const Index = () => {
@@ -39,6 +40,7 @@ export const Index = () => {
         <h2>{currentUser.email}</h2>
       )}
       <button onClick={logout}>Log Out</button>
+      <Footer />
     </div>
   );
 };
