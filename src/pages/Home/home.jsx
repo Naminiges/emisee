@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/footer";
-import './home.css'
+import "./home.css";
+import farmImage from "../../image/farm.jpg";
+import check from "../../image/check.png";
 
 export const Index = () => {
   const [currentUser, setCurrentUser] = useState(null); // State untuk menyimpan informasi pengguna yang saat ini login
@@ -34,13 +36,126 @@ export const Index = () => {
   return (
     <div>
       <Navbar />
-      <h1>Apa Kabar</h1>
-      {/* Tampilkan email pengguna jika currentUser tidak null */}
-      {currentUser && (
-        <h2>{currentUser.email}</h2>
-      )}
-      <button onClick={logout}>Log Out</button>
-      <Footer />
+      <div className="container">
+        <header>
+          <div className="text">
+            <div className="top-home">SELAMAT DATANG DI EMISEE</div>
+            <div className="judul">
+              <h1>Discover</h1>
+              <h1>The nature</h1>
+            </div>
+            <div className="top-home">
+              Mari kita selamatkan alam bersama dan menjaga agar udara tidak
+              tercemar
+            </div>
+            <div className="top-home">
+              <button className="top-btn"><a href="#">Discover More</a></button>
+            </div>
+          </div>
+        </header>
+        <div className="about-us">
+          <div className="info">
+            <div className="isi">
+              <h1>5.000+</h1>
+              Galang Dana
+            </div>
+            <div className="line"></div>
+            <div className="isi">
+              <h1>64.000+</h1>
+              Donasi Terkumpul
+            </div>
+            <div className="line"></div>
+            <div className="isi">
+              <h1>5.000+</h1>
+              Donatur
+            </div>
+          </div>
+          <div className="about">
+            <div className="img">
+              <img src={farmImage} alt="farm img" />
+            </div>
+            <div className="about-isi">
+              <h1>EMISEE Social Company</h1>
+              <div className="text">
+                Kami beroperasi secara mudah untuk menemukan solusi dan
+                mengurangi masalah sosial di Indonesia melalui platform
+                crowdfunding dan CSR Marketplace.
+                <br />
+                <br />
+                Sebagai jembatan kebaikan, kami berkomitmen untuk menciptakan
+                dampak positif dan membawa perubahan nyata untuk Indonesia yang
+                lebih baik.
+              </div>
+              <div className="about-btn">
+                <button className="donasi"><a href="#">Ayo Donasi</a></button>
+              </div>
+            </div>
+          </div>
+          <div className="teman">
+            <h1>Beberapa orang yang sudah menjadi #temanbaik</h1>
+            <div className="orang">
+              <div className="org">
+                <div className="org-text">Mr. Pinus Popy</div>
+              </div>
+              <div className="org">
+                <div className="org-text">Mr. Pinus Popy</div>
+              </div>
+              <div className="org">
+                <div className="org-text">Mr. Pinus Popy</div>
+              </div>
+              <div className="org">
+                <div className="org-text">Mr. Pinus Popy</div>
+              </div>
+            </div>
+          </div>
+          <div className="donasi-info">
+            <div className="donasi-img"></div>
+            <div className="donasi-text">
+              <h1>Kenapa Donasi di EMISEE?</h1>
+              <div className="sub-judul">
+                Ada beberapa keharusan kenapa kamu harus berdonasi di EMISEE,
+                yaitu antara lain :
+              </div>
+              <div className="donasi-isi">
+                <div className="donasi-contain">
+                  <div className="check">
+                    <img src={check} alt="check icon" />
+                  </div>
+                  <div className="donasi-kalimat">
+                    <h2 style={{marginTop:'0'}}>Aman dan Terpercaya</h2>
+                    Semua galang dana yang dibuat sudah melalui proses kurasi
+                    dan verifikasi secara akurat oleh tim kami
+                  </div>
+                </div>
+                <div className="donasi-contain">
+                  <div className="check">
+                    <img src={check} alt="check icon" />
+                  </div>
+                  <div className="donasi-kalimat">
+                    <h2>Mudah dan Cepat</h2>
+                    Proses donasi yang kamu lakukan hanya dalam hitungan menit
+                    dengan berbagai metode pembayaran
+                  </div>
+                </div>
+                <div className="donasi-contain">
+                  <div className="check">
+                    <img src={check} alt="check icon" />
+                  </div>
+                  <div className="donasi-kalimat">
+                    <h2>Transparan</h2>
+                    Pencairan dan penggunaan donasi yang sudah diterima
+                    penggalang dana dapat dilihat di update aktivitas
+                  </div>
+                </div>
+              </div>
+              <div className="donasi-btn">
+                <button><a href="#">Donasi sekarang</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <Footer />
     </div>
   );
 };

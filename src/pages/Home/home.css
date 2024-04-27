@@ -1,0 +1,171 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header {
+  background-image: url("https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+  width: 100%;
+  font-size: 12px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .text {
+  margin-left: 40px;
+  height: 75%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+header .top-home {
+  font-size: 14px;
+}
+
+header .judul h1 {
+  color: greenyellow;
+  margin: 0;
+  font-size: 28px;
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about-us {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 1300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.about-us .info {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  justify-content: space-around;
+  width: 70%;
+  background-color: #50a464;
+  align-items: center;
+  color: white;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 5px;
+}
+.about-us .info .isi {
+  margin: 25px;
+  align-items: center;
+  font-size: 20px;
+}
+.about-us .info .isi h1 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 40px;
+}
+.about-us .info .line {
+  border-right: 2px solid white;
+  height: 80%;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.about .img {
+  width: 45%;
+  text-align: right;
+}
+.about .img img {
+  width: 40%;
+  border-radius: 50%;
+}
+.about .about-isi {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+}
+.about .about-isi h1 {
+  margin: 0;
+}
+
+.about-us .teman .orang {
+  display: flex;
+  height: 250px;
+}
+.about-us .teman .orang .org {
+  background-image: url("../../image/teman.jpg");
+  width: 150px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 10px;
+}
+.about-us .teman .orang .org .org-text {
+  background-color: white;
+  padding: 6px;
+  font-size: 14px;
+  width: 100px;
+  margin-bottom: 35px;
+  border-radius: 10px;
+}
+.about-us .teman .orang {
+  display: flex;
+  justify-content: space-around;
+  width: 700px;
+}
+
+.donasi-info {
+  display: flex;
+  width: 75%;
+  height: 55vh;
+}
+.donasi-info .donasi-text .donasi-isi {
+    margin-left: -20px;
+}
+.donasi-info .donasi-img {
+  background-image: url("../../image/farm.jpg");
+  background-size: cover;
+  width: 80%;
+}
+.donasi-info .check img {
+  width: 75px;
+}
+.donasi-info .donasi-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  margin-left: 20px;
+}
+.donasi-info .donasi-text h1 {
+    margin: 0;
+    font-size: 32px;
+}
+.donasi-info .donasi-isi .donasi-contain {
+  display: flex;
+  text-align: left;
+}
+.donasi-info .donasi-isi .donasi-contain h2{
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.donasi-info .donasi-text .donasi-btn{
+    text-align: left;
+}
+
+button a {
+    color: white;
+}
