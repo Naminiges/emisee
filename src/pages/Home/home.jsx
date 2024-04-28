@@ -7,6 +7,7 @@ import Footer from "../../components/footer/footer";
 import "./home.css";
 import farmImage from "../../image/farm.jpg";
 import check from "../../image/check.png";
+import about_isi from "../../image/about-isi.png";
 
 export const Index = () => {
   const [currentUser, setCurrentUser] = useState(null); // State untuk menyimpan informasi pengguna yang saat ini login
@@ -72,11 +73,13 @@ export const Index = () => {
           </div>
           <div className="about">
             <div className="img">
-              <img src={farmImage} alt="farm img" />
+              <img src={about_isi} alt="about img" />
             </div>
             <div className="about-isi">
-              <h1>EMISEE Social Company</h1>
-              <div className="text">
+              <p className="judul">Tentang Kami</p>
+              <h1>EMISEE Social</h1>
+              <h1>Company</h1>
+              <p>
                 Kami beroperasi secara mudah untuk menemukan solusi dan
                 mengurangi masalah sosial di Indonesia melalui platform
                 crowdfunding dan CSR Marketplace.
@@ -85,7 +88,7 @@ export const Index = () => {
                 Sebagai jembatan kebaikan, kami berkomitmen untuk menciptakan
                 dampak positif dan membawa perubahan nyata untuk Indonesia yang
                 lebih baik.
-              </div>
+              </p>
               <div className="about-btn">
                 <button className="donasi"><a href="#">Ayo Donasi</a></button>
               </div>
@@ -113,8 +116,8 @@ export const Index = () => {
             <div className="donasi-text">
               <h1>Kenapa Donasi di EMISEE?</h1>
               <div className="sub-judul">
-                Ada beberapa keharusan kenapa kamu harus berdonasi di EMISEE,
-                yaitu antara lain :
+                <p>Ada beberapa keharusan kenapa kamu harus berdonasi di EMISEE,
+                yaitu antara lain :</p>
               </div>
               <div className="donasi-isi">
                 <div className="donasi-contain">
@@ -123,8 +126,9 @@ export const Index = () => {
                   </div>
                   <div className="donasi-kalimat">
                     <h2 style={{marginTop:'0'}}>Aman dan Terpercaya</h2>
-                    Semua galang dana yang dibuat sudah melalui proses kurasi
+                    <p>Semua galang dana yang dibuat sudah melalui proses kurasi
                     dan verifikasi secara akurat oleh tim kami
+                  </p>
                   </div>
                 </div>
                 <div className="donasi-contain">
@@ -133,8 +137,9 @@ export const Index = () => {
                   </div>
                   <div className="donasi-kalimat">
                     <h2>Mudah dan Cepat</h2>
-                    Proses donasi yang kamu lakukan hanya dalam hitungan menit
+                    <p>Proses donasi yang kamu lakukan hanya dalam hitungan menit
                     dengan berbagai metode pembayaran
+                  </p>
                   </div>
                 </div>
                 <div className="donasi-contain">
@@ -143,8 +148,9 @@ export const Index = () => {
                   </div>
                   <div className="donasi-kalimat">
                     <h2>Transparan</h2>
-                    Pencairan dan penggunaan donasi yang sudah diterima
+                    <p>Pencairan dan penggunaan donasi yang sudah diterima
                     penggalang dana dapat dilihat di update aktivitas
+                  </p>
                   </div>
                 </div>
               </div>

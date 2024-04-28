@@ -77,16 +77,17 @@ header .judul h1 {
 }
 
 .about {
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 .about .img {
-  width: 45%;
+  width: 50%;
   text-align: right;
 }
 .about .img img {
-  width: 40%;
+  width: 50%;
   border-radius: 50%;
 }
 .about .about-isi {
@@ -96,8 +97,17 @@ header .judul h1 {
   justify-content: space-around;
   text-align: left;
 }
-.about .about-isi h1 {
+.about .about-isi .judul {
+  color: greenyellow;
   margin: 0;
+  font-size: 18px;
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.about .about-isi h1 {
+  margin: 2px 0;
+  font-size: 32px;
 }
 
 .about-us .teman .orang {
@@ -130,7 +140,7 @@ header .judul h1 {
 .donasi-info {
   display: flex;
   width: 75%;
-  height: 55vh;
+  height: 60vh;
 }
 .donasi-info .donasi-text .donasi-isi {
     margin-left: -20px;
@@ -141,7 +151,7 @@ header .judul h1 {
   width: 80%;
 }
 .donasi-info .check img {
-  width: 75px;
+  width: 65px;
 }
 .donasi-info .donasi-text {
   display: flex;
@@ -149,6 +159,7 @@ header .judul h1 {
   justify-content: space-between;
   text-align: left;
   margin-left: 20px;
+  margin-bottom: 2px;
 }
 .donasi-info .donasi-text h1 {
     margin: 0;
@@ -162,8 +173,12 @@ header .judul h1 {
   margin-top: 15px;
   margin-bottom: 5px;
 }
+.donasi-info .donasi-isi .donasi-contain p{
+  margin: 0;
+}
 .donasi-info .donasi-text .donasi-btn{
-    text-align: left;
+  margin-top: 8px;
+  text-align: left;
 }
 
 button a {
