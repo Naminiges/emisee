@@ -8,7 +8,7 @@ export const Kontak = () => {
       <div className="container">
         <div className="top">
           <div>HOME / KONTAK</div>
-          <div><h1>KONTAK</h1></div>
+          <div><h1>Kontak</h1></div>
         </div>
         <div className="main">
             <div className="map">
