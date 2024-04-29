@@ -88,7 +88,7 @@ export const SignUp = () => {
 
             <div class="termofuse">
               <p>
-                By creating an account, you agree to our <span class="highlighted">Terms of Use</span> and <span class="highlighted">Privacy Policy</span>.
+                By creating an account, you agree to our <a href="/syarat-dan-ketentuan" class="highlighted">Terms of Use</a> and <a href="/kebijakan-privasi" class="highlighted">Privacy Policy</a>.
               </p>
             </div>
           </div>

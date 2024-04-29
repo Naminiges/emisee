@@ -19,8 +19,8 @@ const Footer = () => {
       <div className="footer-column">
         <h3>Pelajari Lebih Lanjut</h3>
         <ul>
-          <li>Syarat Pengguna</li>
-          <li>Kebijakan Privasi</li>
+          <li><a href="/syarat-dan-ketentuan" class="highlighted">Syarat Pengguna</a></li>
+          <li><a href="/kebijakan-privasi" class="highlighted">Kebijakan Privasi</a></li>
         </ul>
       </div>
       <div className="footer-column">

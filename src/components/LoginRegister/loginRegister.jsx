@@ -50,8 +50,8 @@ export const LoginRegister = () => {
           <div className="termofuse">
             <p>
               By creating an account, you agree to our{" "}
-              <span className="highlighted">Terms of Use</span> and{" "}
-              <span className="highlighted">Privacy Policy</span>.
+              <a href="/syarat-dan-ketentuan" class="highlighted">Terms of Use</a> and{" "}
+              <a href="/kebijakan-privasi" class="highlighted">Privacy Policy</a>.
             </p>
           </div>
           <div className="login">
