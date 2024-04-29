@@ -10,7 +10,7 @@ export const Campaign = () => {
       <div className="top">
           <div><h1>Campaign</h1></div>
         </div>
-        <div className="main">
+        <div className="main-donasi">
         <div><h1>Mari Mulai Berdonasi</h1></div>
         <div className="wrapper">
             <div className="donate">

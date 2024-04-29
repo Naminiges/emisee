@@ -10,7 +10,7 @@ export const Kontak = () => {
           <div>HOME / KONTAK</div>
           <div><h1>Kontak</h1></div>
         </div>
-        <div className="main">
+        <div className="main-kontak">
             <div className="map">
                 <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.1077807974607!2d98.65714507412083!3d3.5626521504734163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312fdf837c0b1b%3A0xa5ef19b5b1fb64a5!2sProgram%20Studi%20Teknologi%20Informasi%2C%20Fasilkom-TI%2C%20Universitas%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1700523510807!5m2!1sid!2sid"

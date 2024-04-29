@@ -15,7 +15,7 @@
 .top h1{
     font-size: 24px;
 }
-.main {
+.main-kontak {
     background-image: url('https://d1csarkz8obe9u.cloudfront.net/posterpreviews/powerpoint-nature-zen-background-design-template-f2dce050d5dfc1ca63900c0c9ba25f75_screen.jpg?ts=1692126073');
     background-size: cover;
     height: 500px;
@@ -25,7 +25,7 @@
     margin: 40px 60px 40px 60px;
 }
 
-.main .map {
+.main-kontak .map {
   flex:50%;
   padding-bottom: 6px;
   padding-top: 2px;
@@ -33,12 +33,12 @@
   box-sizing: border-box;
 }
 
-.main .map .map-area{
+.main-kontak .map .map-area{
     width: 80vh;
-    height: 80vh;
+    height: 77.5vh;
 }
 
-.main .message{
+.main-kontak .message{
     flex: 50%;
 }
 
