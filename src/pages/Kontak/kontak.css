@@ -34,8 +34,8 @@
 }
 
 .main .map .map-area{
-    width: 80%;
-    height: 100%;
+    width: 80vh;
+    height: 80vh;
 }
 
 .main .message{

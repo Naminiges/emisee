@@ -125,7 +125,7 @@ export const Index = () => {
                     <img src={check} alt="check icon" />
                   </div>
                   <div className="donasi-kalimat">
-                    <h2 style={{marginTop:'0'}}>Aman dan Terpercaya</h2>
+                    <h2>Aman dan Terpercaya</h2>
                     <p>Semua galang dana yang dibuat sudah melalui proses kurasi
                     dan verifikasi secara akurat oleh tim kami
                   </p>
