@@ -1,12 +1,14 @@
-import React from 'react';
-import './Footer.css';
-import logo from '../../image/logo.jpg';
+import React from "react";
+import "./Footer.css";
+import logo from "../../image/logo.jpg";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-column">
-        <img src={logo} alt="Logo" className="footer-logo" />
+        <a href="/">
+          <img src={logo} alt="Logo" className="footer-logo" />
+        </a>
       </div>
       <div className="footer-column">
         <h3>Tunjukkan Aksimu</h3>
@@ -19,8 +21,16 @@ const Footer = () => {
       <div className="footer-column">
         <h3>Pelajari Lebih Lanjut</h3>
         <ul>
-          <li><a href="/syarat-dan-ketentuan" class="highlighted">Syarat Pengguna</a></li>
-          <li><a href="/kebijakan-privasi" class="highlighted">Kebijakan Privasi</a></li>
+          <li>
+            <a href="/syarat-dan-ketentuan" class="highlighted">
+              Syarat Pengguna
+            </a>
+          </li>
+          <li>
+            <a href="/kebijakan-privasi" class="highlighted">
+              Kebijakan Privasi
+            </a>
+          </li>
         </ul>
       </div>
       <div className="footer-column">
@@ -32,6 +42,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;

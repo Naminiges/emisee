@@ -51,8 +51,8 @@ const Navbar = () => {
         <li className={location.pathname === "/campaign" ? "active" : ""}>
           <a href="/campaign">Campaign</a>
         </li>
-        <li className={location.pathname === "/partnership" ? "active" : ""}>
-          <a href="/partnership">Partnership</a>
+        <li className={location.pathname === "/blog" ? "active" : ""}>
+          <a href="/blog">Blog</a>
         </li>
         <li className={location.pathname === "/kontak" ? "active" : ""}>
           <a href="/kontak">Contact</a>

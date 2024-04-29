@@ -27,7 +27,6 @@
 
 .main-kontak .map {
   flex:50%;
-  padding-bottom: 6px;
   padding-top: 2px;
   object-fit: cover;
   box-sizing: border-box;
@@ -35,7 +34,7 @@
 
 .main-kontak .map .map-area{
     width: 80vh;
-    height: 77.5vh;
+    height: 100%;
 }
 
 .main-kontak .message{

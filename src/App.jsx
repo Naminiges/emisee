@@ -4,7 +4,7 @@ import { SignUp } from "./components/LoginRegister/signUp";
 import { Index } from "./pages/Home/home";
 import { LoginRegister } from "./components/LoginRegister/loginRegister";
 import { Kontak } from "./pages/Kontak/kontak"
-import { Partnership } from "./pages/Partnership/partnership";
+import { Blog } from "./pages/blog/blog";
 import { Program } from "./pages/Program/program";
 import { Campaign } from "./pages/Campaign/campaign";
 import { SyaratDanKetentuan } from "./pages/SKUser/SyaratDanKetentuan";
@@ -21,7 +21,7 @@ function App() {
           <Route path="/login" element={<Auth />}></Route>
           <Route path="/loginregister" element={<LoginRegister />}></Route>
           <Route path="/kontak" element={<Kontak />}></Route>
-          <Route path="/partnership" element={<Partnership />}></Route>
+          <Route path="/blog" element={<Blog />}></Route>
           <Route path="/program" element={<Program />}></Route>
           <Route path="/campaign" element={<Campaign />}></Route>
           <Route path="/syarat-dan-ketentuan" element={<SyaratDanKetentuan />}></Route>

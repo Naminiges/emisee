@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    background-color: #f0f0f0;
+    background-color: #F5EFE6;
     padding: 20px;
+    
   }
   
   .footer-column {
