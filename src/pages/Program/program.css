@@ -1,0 +1,154 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+.top {
+  background-image: url("https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  height: 20vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+  color: white;
+}
+.top h1 {
+  font-size: 24px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 1200px;
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+}
+.main .card .contain .one {
+  background-image: url("https://rmol.id/images/berita/normal/2014/02/55023_07031006022014_petani.jpg");
+  background-size: cover;
+}
+.main .card .contain .two {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkXpBLO53DWe1WuZ0RuAuX2lR6XL0l9v0djVIzLx4f78ioBmmWvdXgDa-Q4CNA5ViEJn8&usqp=CAU");
+  background-size: cover;
+}
+.main .card .contain .three {
+  background-image: url("../../image/harvesting.jpg");
+  background-size: cover;
+}
+.main .card .contain .four {
+  background-image: url("../../image/ternak.jpg");
+  background-size: cover;
+}
+.main .card .contain .image {
+  width: 200px;
+  height: 250px;
+  border-radius: 10px 10px 0 0;
+}
+.main .card .contain .text-contain {
+  text-align: center;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-top: 0;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 5px 10px 2px #888888;
+}
+
+.program {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+}
+.main .program .five {
+  background-image: url("../../image/garden.jpg");
+  background-size: cover;
+}
+.main .program .six {
+  background-image: url("../../image/organic-farming.jpg");
+  background-size: cover;
+}
+.main .program .seven {
+  background-image: url("../../image/fruit.jpg");
+  background-size: cover;
+}
+.main .program .program-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 0 0 10px 10px;
+}
+.main .program .program-text {
+  text-align: center;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 10px 10px 0 0;
+}
+
+.main .info {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 400px;
+}
+.main .info .judul {
+  color: greenyellow;
+  margin: 0;
+  font-size: 18px;
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.main .info .info-image {
+  background-image: url("../../image/farmer.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.main .info .info-img {
+  width: 500px;
+  display: flex;
+  justify-content: right;
+}
+.main .info .info-contain {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main .info .info-contain h1{
+  font-size: 36px;
+  margin: 0;
+}
+.main .info .info-contain p{
+  margin: 0;
+}
+.main .info .info-icon {
+  display: flex;
+  justify-content: space-between;
+}
+.main .info .info-icon .icon img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.end {
+    height: 150px;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.end-btn {
+    background-color: goldenrod;
+}
