@@ -5,6 +5,7 @@ import Footer from "../../components/footer/footer";
 import menanam from "../../image/menanam.png";
 import memanen from "../../image/memanen.png";
 import bertani from "../../image/bertani.png";
+import "../../App.css";
 
 export const Program = () => {
   return (
@@ -26,7 +27,7 @@ export const Program = () => {
             <div className="contain">
               <div className="image two"></div>
               <div className="text-contain" style={{ width: "200px" }}>
-                Memberikan Edukasi Kepada Anak
+                Memberikan Edukasi Kepada Masyarakat
               </div>
             </div>
             <div className="contain">
@@ -57,18 +58,31 @@ export const Program = () => {
               <div className="info-image"></div>
             </div>
             <div className="info-contain">
-            <p className="judul">What We Do</p>
-              <h1>Membantu Petani Untuk Menjadi Kaya</h1>
+              <p className="judul">What We Do</p>
+              <h1>Berkontribusi Untuk Bumi</h1>
               <p>
-                Nisi elit ipsum aute exercitation enim. Pariatur proident consectetur nulla veniam magna exercitation aliquip. Nostrud ex Lorem nisi anim eiusmod sint pariatur. Duis nostrud nisi laboris est id.
+                Emisee bertujuan untuk meningkatkan kesadaran masyarakat akan
+                pentingnya menjaga lingkungan, mempromosikan gaya hidup yang
+                ramah lingkungan, dan mendukung berbagai inisiatif yang
+                bertujuan untuk melestarikan sumber daya alam serta mengurangi
+                dampak negatif terhadap lingkungan.
                 <br />
                 <br />
-                Minim sint occaecat voluptate in nulla amet exercitation labore amet commodo qui est. Culpa dolor dolore eiusmod deserunt. Amet laboris sit velit occaecat.
+                Dengan memberikan akses yang mudah dan informasi yang dapat
+                dipercaya, Emisee ingin mendorong partisipasi aktif dari
+                individu dan komunitas dalam menjaga kelestarian Bumi bagi
+                generasi mendatang.
               </p>
               <div className="info-icon">
-                <div className="icon"><img src={memanen} alt="memanen" /></div>
-                <div className="icon"><img src={menanam} alt="menanam" /></div>
-                <div className="icon"><img src={bertani} alt="bertani" /></div>
+                <div className="icon">
+                  <img src={memanen} alt="memanen" />
+                </div>
+                <div className="icon">
+                  <img src={menanam} alt="menanam" />
+                </div>
+                <div className="icon">
+                  <img src={bertani} alt="bertani" />
+                </div>
               </div>
             </div>
           </div>
@@ -76,7 +90,9 @@ export const Program = () => {
       </div>
       <div className="end">
         <h1>Tertarik untuk bergabung dengan kami?</h1>
-        <button className="end-btn"><a href="loginRegister">Ayo Bergabung</a></button>
+        <button className="end-btn">
+          <a href="loginRegister">Ayo Bergabung</a>
+        </button>
       </div>
       <Footer />
     </div>

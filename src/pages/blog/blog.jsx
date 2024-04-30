@@ -2,9 +2,10 @@ import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/footer";
 import "./blog.css";
-import blog1 from "../../image/blog1.jpg"
-import blog2 from "../../image/blog2.jpg"
-import blog3 from "../../image/blog3.jpg"
+import blog1 from "../../image/blog1.jpg";
+import blog2 from "../../image/blog2.jpg";
+import blog3 from "../../image/blog3.jpg";
+import "../../App.css";
 
 export const Blog = () => {
   return (
@@ -22,9 +23,9 @@ export const Blog = () => {
             <div className="blog-content">
               <h2>Data Sampah Plastik di Indonesia</h2>
               <p>
-                Memberikan bantuan kepada buruh tani untuk meningkatkan
-                kesejahteraan mereka. Dukungan Anda akan membuat perbedaan besar
-                dalam kehidupan mereka.
+                Data menunjukkan bahwa Indonesia merupakan salah satu negara
+                dengan jumlah sampah plastik terbesar di dunia. Hal ini
+                menimbulkan dampak negatif pada ekosistem dan kesehatan manusia.
               </p>
               <a href="#">Baca Selengkapnya</a>
             </div>
@@ -34,9 +35,10 @@ export const Blog = () => {
             <div className="blog-content">
               <h2>Global Warming</h2>
               <p>
-                Mendukung program pembelajaran dini untuk mempersiapkan
-                anak-anak masa depan. Bergabunglah dengan kami untuk menciptakan
-                masa depan yang lebih baik.
+                Global warming adalah fenomena pemanasan global yang disebabkan
+                oleh peningkatan konsentrasi gas-gas rumah kaca di atmosfer
+                bumi. Hal ini menyebabkan suhu rata-rata planet ini meningkat
+                secara signifikan, mengakibatkan perubahan iklim yang merusak.
               </p>
               <a href="#">Baca Selengkapnya</a>
             </div>
@@ -46,9 +48,10 @@ export const Blog = () => {
             <div className="blog-content">
               <h2>Zero Waste</h2>
               <p>
-                Mendorong perkembangan buah dan sayur yang sehat untuk menjaga
-                gizi masyarakat. Temukan bagaimana Anda dapat ikut
-                berpartisipasi dalam misi kami.
+                Zero waste merupakan konsep yang bertujuan untuk mengurangi
+                sampah yang dihasilkan oleh individu, perusahaan, atau komunitas
+                dengan cara meminimalkan penggunaan bahan yang tidak dapat
+                terurai secara alami atau didaur ulang.
               </p>
               <a href="#">Baca Selengkapnya</a>
             </div>

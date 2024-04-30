@@ -9,6 +9,7 @@ import { Program } from "./pages/Program/program";
 import { Campaign } from "./pages/Campaign/campaign";
 import { SyaratDanKetentuan } from "./pages/SKUser/SyaratDanKetentuan";
 import { Kebijakan } from "./pages/Kebijakan/KebijakanPrivasi";
+import { Faq } from "./pages/FAQ/faq";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/campaign" element={<Campaign />}></Route>
           <Route path="/syarat-dan-ketentuan" element={<SyaratDanKetentuan />}></Route>
           <Route path="/kebijakan-privasi" element={<Kebijakan />}></Route>
+          <Route path="/faq" element={<Faq />}></Route>
         </Routes>
       </Router>
     </div>

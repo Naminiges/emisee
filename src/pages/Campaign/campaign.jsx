@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from "../../components/footer/footer";
+import "../../App.css";
 import "./campaign.css";
 export const Campaign = () => {
   return (

@@ -1,5 +1,6 @@
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/footer";
+import "../../App.css";
 import "./kontak.css";
 export const Kontak = () => {
   return (

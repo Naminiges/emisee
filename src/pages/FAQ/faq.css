@@ -1,11 +1,15 @@
-.main-sk {
+.main-faq {
     font-weight: 500;
-    height: 700px;
+    height: 250vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     margin: 40px 60px;
 }
-.main-sk li {
+.main-faq .list-faq li {
+    list-style-type: none;
     margin-bottom: 0.5rem;
+}
+.main-faq .list-faq li p {
+    margin: 2rem 0;
 }
