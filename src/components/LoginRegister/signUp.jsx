@@ -42,7 +42,7 @@ export const SignUp = () => {
   const signInWithGoogle = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
-      navigate("/");
+      navigate("/home");
     } catch (err) {
       console.error(err);
     }

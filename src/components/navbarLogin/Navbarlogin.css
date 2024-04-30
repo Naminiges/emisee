@@ -1,0 +1,57 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5EFE6; /* Warna latar belakang navbar */
+    padding: 20px; /* Ruang di sekitar konten navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan di bawah navbar */
+    font-family: 'Poppins', sans-serif;
+    margin-top: -9px;
+
+  }
+  
+  .navbar img {
+    width: 200px; /* Lebar gambar logo */
+  }
+  
+  .navbar-menu {
+    list-style-type: none; /* Menghilangkan bullet point pada daftar menu */
+    display: flex;
+    gap: 80px; /* Jarak antar item menu */
+  }
+
+  ul.navbar-menu a{
+    color: #333333;
+  }
+  .navbar-menu li {
+    color: #333333; /* Warna teks menu */
+    font-size: 16px; /* Ukuran teks menu */
+    cursor: pointer;
+  }
+  
+  .navbar-menu li:hover {
+    color: #007bff; /* Warna teks menu saat dihover */
+  }
+  
+  button {
+    background-color: #34861a; /* Warna latar belakang tombol */
+    color: #ffffff; /* Warna teks tombol */
+    border: none; /* Menghilangkan border tombol */
+    padding: 10px 20px; /* Ruang di dalam tombol */
+    font-size: 16px; /* Ukuran teks tombol */
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  button:hover {
+    background-color: #3a941f; /* Warna latar belakang tombol saat dihover */
+  }
+  
+  /* Tambahkan bagian ini untuk menyesuaikan item navbar yang aktif */
+.navbar-menu li.active {
+  font-weight: bold; /* Misalnya, membuat teks lebih tebal */
+  color: #007bff; /* Ubah warna teks untuk menunjukkan bahwa item ini adalah yang aktif */
+}
+

@@ -1,0 +1,107 @@
+.container {
+}
+
+.galangdana-container {
+    margin: 0 auto; /* Menempatkan container di tengah halaman */
+    padding: 40px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-weight: bold;
+  }
+  
+  .galangdana-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .galangdana-label {
+    font-size: 12px;
+    line-height: 16px;
+    color: #6b7280;
+  }
+
+  .galangdana-input {
+    padding: 9px 16px;
+    margin-top: 4px;
+    font-size: 16px;
+    color: #6b7280;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+  }
+  
+  .galangdana-gender {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+  }
+  
+  .galangdana-gender label {
+    margin-right: 8px;
+  }
+  
+  .galangdana-date {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+  
+  .galangdana-citizenship {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+  }
+  
+  .galangdana-citizenship label {
+    margin-right: 8px;
+  }
+  
+  .galangdana-counter {
+    margin-top: 2px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    color: #6b7280;
+  }
+  
+  .galangdana-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 8px 20px 8px 20px;
+  }
+  
+  .galangdana-back {
+    font-size: 16px;
+  }
+  
+  .galangdana-next {
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+  }
+  
+  .galangdana-save {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    color: #059669;
+    background-color: rgba(5, 150, 105, 0.1);
+    border: 1px solid #059669;
+    border-radius: 4px;
+  }
+  

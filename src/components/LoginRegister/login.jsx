@@ -39,7 +39,7 @@ export const Auth = () => {
       const user = userCredential.user;
       // Simpan informasi pengguna ke dalam penyimpanan sesi
       localStorage.setItem("currentUser", JSON.stringify(user));
-      navigate("/");
+      navigate("/home");
     } catch (err) {
       if (email === "") {
         setEmailError("Email is required");
@@ -61,7 +61,7 @@ export const Auth = () => {
       const user = userCredential.user;
       // Simpan informasi pengguna ke dalam penyimpanan sesi
       localStorage.setItem("currentUser", JSON.stringify(user));
-      navigate("/");
+      navigate("/home");
     } catch (err) {
       // Tangani kesalahan saat login dengan Google
       console.error(err);
