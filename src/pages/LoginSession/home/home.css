@@ -1,0 +1,62 @@
+.main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 2200px;
+    margin: 0 50px 0 50px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+div {
+    margin: 0;
+}
+.card .img {
+    width: 350px;
+    height: 200px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpt8UtKEBZM93wd_e0bOZWkBAzg_Kc9RNwrOYIjxO1JFnQ4Fse');
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+.card .card-text {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    border: 1px solid black;
+    box-shadow: 0px 2px 5px 1px #888888;
+    border-radius: 0 0 10px 10px;
+}
+.card .card-text .judul {
+    font-size: large;
+    font-weight: 800;
+}
+.dana {
+    margin: 0;
+    color: #98a094;
+}
+.card .card-text .dana-top {
+    display: flex;
+    justify-content: space-between;
+}
+.card .card-text .bottom {
+    display: flex;
+    justify-content: end;
+}
+.card .card-text .dana .line{
+    height: 7px;
+    display: flex;
+}
+.card .card-text .dana .line .kumpul{
+    background-color: #35927a;
+    width: 25%;
+    border-radius: 10px 0 0  10px;
+}
+.card .card-text .dana .line .sisa{
+    background-color: #e9ecef;
+    width: 75%;
+    border-radius: 0 10px 10px 0;
+}
