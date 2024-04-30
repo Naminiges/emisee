@@ -36,8 +36,8 @@ const Footer = () => {
       <div className="footer-column">
         <h3>Terhubung</h3>
         <ul>
-          <li>FAQ</li>
-          <li>Kontak Kami</li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/kontak">Kontak Kami</a></li>
         </ul>
       </div>
     </footer>

@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../../components/footer/footer";
+import "../../App.css";
 import "./Kebijakan.css";
 export const Kebijakan = () => {
   return (
