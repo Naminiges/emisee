@@ -1,0 +1,78 @@
+.edit-profile-container {
+  display: flex;
+    padding-bottom: 20px;
+}
+
+.form1-container {
+  flex: 60%;
+  margin-right: 20px;
+  text-align: end;
+}
+
+.image-container {
+  flex: 40%;
+  text-align: center;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex; /* Menjadikan kontainer flex */
+  flex-direction: column; /* Mengatur tata letak kolom */
+  align-items: center; /* Mengatur kontainer vertikal */
+  justify-content: center; /* Mengatur kontainer horizontal */
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  color: #999;
+}
+
+input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.button-profil {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-profil:hover {
+  background-color: #0056b3;
+}
+
+.date {
+  padding-bottom: 10px;
+}
