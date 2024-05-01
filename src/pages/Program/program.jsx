@@ -19,7 +19,7 @@ export const Program = () => {
           </div>
         </div>
         <div className="main">
-          <div className="card">
+          <div className="program-card">
             <div className="contain">
               <div className="image one"></div>
               <div className="text-contain">Membantu Buruh Tani</div>

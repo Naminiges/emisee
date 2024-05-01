@@ -13,7 +13,7 @@ export const Home = () => {
             <h1>Temukan Siapa Yang Ingin Kamu Bantu</h1>
           </div>
         </div>
-        <div className="main">
+        <div className="home-main">
           <div className="card">
             <div className="img"></div>
             <div className="card-text">

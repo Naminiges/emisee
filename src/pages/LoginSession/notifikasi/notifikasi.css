@@ -1,0 +1,35 @@
+.notif-main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+
+.notif-card {
+    display: flex;
+    padding: 20px;
+    column-gap: 20px;
+}
+.notif-card:nth-child(even) {
+    background-color: #f8f8f8;
+}
+.notif-img {
+    width: 120px;
+    height: 120px;
+}
+.notif-img img{
+    width: 100%;
+}
+.notif-card .notif-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    color: #787474
+}
+.notif-card .notif-text h3 {
+    color: black;
+    margin: 0;
+}

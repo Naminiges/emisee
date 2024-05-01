@@ -1,9 +1,11 @@
-.main {
+.home-main {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     height: 2200px;
     margin: 0 50px 0 50px;
+    flex-direction: column;
+    align-items: center;
 }
 .card {
     display: flex;

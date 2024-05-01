@@ -5,33 +5,33 @@
   align-items: center;
   height: 1200px;
 }
-.card {
+.program-card {
   display: flex;
   justify-content: space-between;
   width: 900px;
 }
-.main .card .contain .one {
+.main .program-card .contain .one {
   background-image: url("https://rmol.id/images/berita/normal/2014/02/55023_07031006022014_petani.jpg");
   background-size: cover;
 }
-.main .card .contain .two {
+.main .program-card .contain .two {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkXpBLO53DWe1WuZ0RuAuX2lR6XL0l9v0djVIzLx4f78ioBmmWvdXgDa-Q4CNA5ViEJn8&usqp=CAU");
   background-size: cover;
 }
-.main .card .contain .three {
+.main .program-card .contain .three {
   background-image: url("../../image/harvesting.jpg");
   background-size: cover;
 }
-.main .card .contain .four {
+.main .program-card .contain .four {
   background-image: url("../../image/ternak.jpg");
   background-size: cover;
 }
-.main .card .contain .image {
+.main .program-card .contain .image {
   width: 200px;
   height: 250px;
   border-radius: 10px 10px 0 0;
 }
-.main .card .contain .text-contain {
+.main .program-card .contain .text-contain {
   text-align: center;
   height: 40px;
   display: flex;
