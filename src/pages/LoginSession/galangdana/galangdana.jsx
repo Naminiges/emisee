@@ -32,6 +32,24 @@ export const Galangdana = () => {
   const userDataCollectionRef = collection(db, "Galang_Dana");
 
   const onsubmitData = async () => {
+    if (
+      !name ||
+      !id ||
+      !gender ||
+      !birthPlace ||
+      !birthDate ||
+      !province ||
+      !districts ||
+      !profession ||
+      !citizenship ||
+      !phone ||
+      !email ||
+      !address
+    ) {
+      alert("Mohon lengkapi semua field sebelum mengirimkan formulir.");
+      return;
+    }
+
     try {
       await addDoc(userDataCollectionRef, {
         Fullname: name,
@@ -86,6 +104,7 @@ export const Galangdana = () => {
               className="galangdana-input"
               placeholder="Write Here"
               onChange={(e) => setName(e.target.value)}
+              required // tambahkan required di sini
             />
           </div>
           <div className="galangdana-item">
@@ -95,14 +114,29 @@ export const Galangdana = () => {
               className="galangdana-input"
               placeholder="Write Here"
               onChange={(e) => setId(Number(e.target.value))}
+              required // tambahkan required di sini
             />
           </div>
           <div className="galangdana-item">
             <div className="galangdana-label">Gender</div>
             <div className="galangdana-gender">
-              <input type="radio" id="male" name="gender" value="male" onChange={() => setGender("Male")}/>
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+                onChange={() => setGender("Male")}
+                required // tambahkan required di sini
+              />
               <label htmlFor="male">Male</label>
-              <input type="radio" id="female" name="gender" value="female" onChange={() => setGender("Female")}/>
+              <input
+                type="radio"
+                id="female"
+                name="gender"
+                value="female"
+                onChange={() => setGender("Female")}
+                required // tambahkan required di sini
+              />
               <label htmlFor="female">Female</label>
             </div>
           </div>
@@ -112,9 +146,15 @@ export const Galangdana = () => {
               type="text"
               className="galangdana-input"
               placeholder="Write Here"
-              onChange={(e) => setBirthPlace((e.target.value))}
+              onChange={(e) => setBirthPlace(e.target.value)}
+              required // tambahkan required di sini
             />
-            <input type="date" className="galangdana-input" onChange={(e) => setBirthDate((e.target.value))}/>
+            <input
+              type="date"
+              className="galangdana-input"
+              onChange={(e) => setBirthDate(e.target.value)}
+              required // tambahkan required di sini
+            />
           </div>
           <div className="galangdana-item">
             <div className="galangdana-label">Province</div>
@@ -122,7 +162,8 @@ export const Galangdana = () => {
               type="text"
               className="galangdana-input"
               placeholder="Write Here"
-              onChange={(e) => setProvince((e.target.value))}
+              onChange={(e) => setProvince(e.target.value)}
+              required // tambahkan required di sini
             />
           </div>
           <div className="galangdana-item">
@@ -131,7 +172,8 @@ export const Galangdana = () => {
               type="text"
               className="galangdana-input"
               placeholder="Write Here"
-              onChange={(e) => setDistricts((e.target.value))}
+              onChange={(e) => setDistricts(e.target.value)}
+              required // tambahkan required di sini
             />
           </div>
           <div className="galangdana-item">
@@ -140,15 +182,30 @@ export const Galangdana = () => {
               type="text"
               className="galangdana-input"
               placeholder="Write Here"
-              onChange={(e) => setProfession((e.target.value))}
+              onChange={(e) => setProfession(e.target.value)}
+              required // tambahkan required di sini
             />
           </div>
           <div className="galangdana-item">
             <div className="galangdana-label">Citizenship</div>
             <div className="galangdana-citizenship">
-              <input type="radio" id="wni" name="citizenship" value="wni" onChange={() => setCitizenship("WNI")}/>
+              <input
+                type="radio"
+                id="wni"
+                name="citizenship"
+                value="wni"
+                onChange={() => setCitizenship("WNI")}
+                required // tambahkan required di sini
+              />
               <label htmlFor="wni">WNI</label>
-              <input type="radio" id="wna" name="citizenship" value="wna" onChange={() => setCitizenship("WNA")}/>
+              <input
+                type="radio"
+                id="wna"
+                name="citizenship"
+                value="wna"
+                onChange={() => setCitizenship("WNA")}
+                required // tambahkan required di sini
+              />
               <label htmlFor="wna">WNA</label>
             </div>
           </div>
@@ -159,6 +216,7 @@ export const Galangdana = () => {
               className="galangdana-input"
               placeholder="Write Here"
               onChange={(e) => setPhone(Number(e.target.value))}
+              required // tambahkan required di sini
             />
           </div>
           <div className="galangdana-item">
@@ -167,7 +225,8 @@ export const Galangdana = () => {
               type="email"
               className="galangdana-input"
               placeholder="Your Email"
-              onChange={(e) => setEmail((e.target.value))}
+              onChange={(e) => setEmail(e.target.value)}
+              required // tambahkan required di sini
             />
           </div>
           <div className="galangdana-item">
@@ -176,7 +235,8 @@ export const Galangdana = () => {
               type="text"
               className="galangdana-input"
               placeholder="Write here"
-              onChange={(e) => setAddress((e.target.value))}
+              onChange={(e) => setAddress(e.target.value)}
+              required // tambahkan required di sini
             />
           </div>
           <div className="galangdana-counter">0 / 1000</div>
@@ -184,7 +244,9 @@ export const Galangdana = () => {
             <div className="galangdana-back">Back</div>
             <div className="galangdana-next">Next</div>
           </div>
-          <button onClick={onsubmitData} className="galangdana-save" >Exit and Save Changes</button>
+          <button onClick={onsubmitData} className="galangdana-save">
+            Exit and Save Changes
+          </button>
         </div>
       </div>
       <Footer />

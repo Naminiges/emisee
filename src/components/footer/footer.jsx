@@ -31,7 +31,7 @@ const Footer = () => {
               <a href="/home">Donasi</a>
             </li>
             <li>
-              <a href="//galang-dana">Menggalang Dana</a>
+              <a href="/galang-dana">Menggalang Dana</a>
             </li>
           </ul>
         ) : (
