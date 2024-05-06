@@ -87,6 +87,15 @@ export const Galangdana = () => {
     getUserData();
   }, [onsubmitData]);
 
+  useEffect(() => {
+    // Ambil nilai username dan email dari local storage dan tetapkan ke state
+    const storedUser = JSON.parse(localStorage.getItem("currentUser"));
+    
+    if (storedUser && storedUser.email) {
+      setEmail(storedUser.email);
+    }
+  }, []);
+  console.log(userdata);
   return (
     <div>
       <Navbarlogin />
@@ -225,8 +234,10 @@ export const Galangdana = () => {
               type="email"
               className="galangdana-input"
               placeholder="Your Email"
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
               required // tambahkan required di sini
+              readOnly
             />
           </div>
           <div className="galangdana-item">

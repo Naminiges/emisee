@@ -2,8 +2,20 @@ import React, { useState } from "react";
 import Navbarlogin from "../../../components/navbarLogin/Navbarlogin";
 import Footer from "../../../components/footer/footer";
 import "./profil.css";
+import { useEffect } from "react";
+import {db} from "../../../config/firebase";
+import {
+  getDocs,
+  collection,
+  addDoc,
+  deleteDoc,
+  doc,
+  updateDoc,
+} from "firebase/firestore";
 
 export const Profil = () => {
+  const [userprofile, setuserprofileList] = useState([])
+
   const [username, setUsername] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,6 +24,48 @@ export const Profil = () => {
   const [gender, setGender] = useState("");
   const [birthdate, setBirthdate] = useState("");
   const [profileImage, setProfileImage] = useState(null);
+
+  const userProfileCollectionRef = collection(db, "...");//nanti diisi
+
+  const onsubmitProfile = async () => {
+    if (
+      // !name ||
+      // !id ||
+      // !gender ||
+      // !birthPlace ||
+      // !birthDate ||
+      // !province ||
+      // !districts ||
+      // !profession ||
+      // !citizenship ||
+      // !phone ||
+      // !email ||
+      // !address
+    ) {
+      alert("Mohon lengkapi semua field sebelum mengirimkan formulir.");
+      return;
+    }
+
+    try {
+      await addDoc(userProfileCollectionRef, {
+        // Fullname: name,
+        // ID: id,
+        // Gender: gender,
+        // Birth_place: birthPlace,
+        // Birth_date: birthDate,
+        // Province: province,
+        // Districts: districts,
+        // Profession: profession,
+        // Citizenship: citizenship,
+        // Phone: phone,
+        // email: email,
+        // Address: address,
+      });
+      window.location.reload();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const handleImageChange = (e) => {
     const image = e.target.files[0];
@@ -22,6 +76,17 @@ export const Profil = () => {
     e.preventDefault();
     // Lakukan sesuatu dengan data yang disubmit
   };
+  
+  useEffect(() => {
+    // Ambil nilai username dan email dari local storage dan tetapkan ke state
+    const storedUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (storedUser && storedUser.displayName) {
+      setUsername(storedUser.displayName);
+    }
+    if (storedUser && storedUser.email) {
+      setEmail(storedUser.email);
+    }
+  }, []);
 
   return (
     <div>
@@ -106,7 +171,7 @@ export const Profil = () => {
             />
             </div>
 
-            <button className="button-profil" type="submit">Save</button>
+            <button className="button-profil" type="submit" onClick={onsubmitProfile}>Save</button>
           </form>
         </div>
 
