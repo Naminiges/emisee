@@ -3,7 +3,7 @@ import Navbarlogin from "../../../components/navbarLogin/Navbarlogin";
 import Footer from "../../../components/footer/footer";
 import "./profil.css";
 import { useEffect } from "react";
-import {db} from "../../../config/firebase";
+import {auth, db, storage} from "../../../config/firebase";
 import {
   getDocs,
   collection,
@@ -12,6 +12,7 @@ import {
   doc,
   updateDoc,
 } from "firebase/firestore";
+import { ref, uploadBytes } from "firebase/storage";
 
 export const Profil = () => {
   const [userprofile, setuserprofileList] = useState([])
@@ -25,57 +26,57 @@ export const Profil = () => {
   const [birthdate, setBirthdate] = useState("");
   const [profileImage, setProfileImage] = useState(null);
 
-  const userProfileCollectionRef = collection(db, "...");//nanti diisi
+  const userProfileCollectionRef = collection(db, "User");
 
   const onsubmitProfile = async () => {
     if (
-      // !name ||
-      // !id ||
-      // !gender ||
-      // !birthPlace ||
-      // !birthDate ||
-      // !province ||
-      // !districts ||
-      // !profession ||
-      // !citizenship ||
-      // !phone ||
-      // !email ||
-      // !address
+      !username ||
+      !name ||
+      !email ||
+      !phoneNumber ||
+      !job ||
+      !gender ||
+      !birthdate ||
+      !profileImage
     ) {
       alert("Mohon lengkapi semua field sebelum mengirimkan formulir.");
       return;
     }
 
     try {
+      const filesFolderRef = ref(storage, `userProfile/${profileImage.name}`);
+      await uploadBytes(filesFolderRef, profileImage);
       await addDoc(userProfileCollectionRef, {
-        // Fullname: name,
-        // ID: id,
-        // Gender: gender,
-        // Birth_place: birthPlace,
-        // Birth_date: birthDate,
-        // Province: province,
-        // Districts: districts,
-        // Profession: profession,
-        // Citizenship: citizenship,
-        // Phone: phone,
-        // email: email,
-        // Address: address,
+        user_id: auth?.currentUser?.uid,
+        username: username,
+        name: name,
+        email: email,
+        phone_number: phoneNumber,
+        job: job,
+        gender: gender,
+        birthdate: birthdate,
+        user_picture: profileImage.name,
       });
       window.location.reload();
     } catch (err) {
       console.log(err);
     }
   };
-
-  const handleImageChange = (e) => {
-    const image = e.target.files[0];
-    setProfileImage(image);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Lakukan sesuatu dengan data yang disubmit
-  };
+  useEffect(() => {
+    const getUserProfileList = async () => {
+      try {
+        const data = await getDocs(userProfileCollectionRef);
+        const filteredData = data.docs.map((docs) => ({
+          ...docs.data(),
+          id: docs.id,
+        }));
+        setuserprofileList(filteredData);
+      } catch(err){
+        console.error(err);
+      }
+    };
+    getUserProfileList();
+  }, [onsubmitProfile]);
   
   useEffect(() => {
     // Ambil nilai username dan email dari local storage dan tetapkan ke state
@@ -88,13 +89,17 @@ export const Profil = () => {
     }
   }, []);
 
+  const handleImageChange = (e) => {
+    const image = e.target.files[0];
+    setProfileImage(image);
+  };
+
   return (
     <div>
       <Navbarlogin />
       <div className="edit-profile-container">
         <div className="form1-container">
           <h2>Edit Profile</h2>
-          <form onSubmit={handleSubmit}>
             <label>Username</label>
             <input
               type="text"
@@ -114,6 +119,7 @@ export const Profil = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              readOnly
             />
 
             <label>Phone Number</label>
@@ -149,15 +155,6 @@ export const Profil = () => {
                     onChange={(e) => setGender(e.target.value)}
                   />
                   Female
-
-
-                  <input
-                    type="radio"
-                    value="other"
-                    checked={gender === "other"}
-                    onChange={(e) => setGender(e.target.value)}
-                  />
-                  Other
                 </label>
               </div>
             </div>
@@ -171,8 +168,7 @@ export const Profil = () => {
             />
             </div>
 
-            <button className="button-profil" type="submit" onClick={onsubmitProfile}>Save</button>
-          </form>
+            <button className="button-profil" onClick={onsubmitProfile}>Save</button>
         </div>
 
         <div className="image-container">
@@ -183,7 +179,7 @@ export const Profil = () => {
             ) : (
               <div className="placeholder">Select Image</div>
             )}
-            <input type="file" onChange={handleImageChange} accept="image/*" />
+            <input type="file"  onChange={handleImageChange}  />
           </div>
         </div>
       </div>

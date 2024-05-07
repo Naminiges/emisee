@@ -95,7 +95,6 @@ export const Galangdana = () => {
       setEmail(storedUser.email);
     }
   }, []);
-  console.log(userdata);
   return (
     <div>
       <Navbarlogin />
