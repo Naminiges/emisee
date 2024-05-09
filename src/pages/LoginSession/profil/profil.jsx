@@ -16,6 +16,7 @@ import { ref, uploadBytes } from "firebase/storage";
 
 export const Profil = () => {
   const [userprofile, setuserprofileList] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const [username, setUsername] = useState("");
   const [name, setName] = useState("");
@@ -60,6 +61,63 @@ export const Profil = () => {
       window.location.reload();
     } catch (err) {
       console.log(err);
+    }
+  };
+
+  // Di useEffect yang sesuai:
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("currentUser"));
+    const currentUserUid = storedUser.uid;
+
+    const getUserProfileList = async () => {
+      try {
+        const data = await getDocs(userProfileCollectionRef);
+        const filteredData = data.docs.map((docs) => ({
+          ...docs.data(),
+          id: docs.id,
+        }));
+        setuserprofileList(filteredData);
+
+        // Dapatkan data pengguna saat ini
+        const currentUserData = filteredData.find(
+          (user) => user.user_id === currentUserUid
+        );
+
+        // Jika data pengguna ditemukan
+        if (currentUserData) {
+          setUsername(currentUserData.username || "");
+          setName(currentUserData.name || "");
+          setEmail(currentUserData.email || "");
+          setPhoneNumber(currentUserData.phone_number || "");
+          setJob(currentUserData.job || "");
+          setGender(currentUserData.gender || "");
+          setBirthdate(currentUserData.birthdate || "");
+
+          // Dapatkan URL gambar dari Firebase Storage berdasarkan nama file
+          const profileImageUrl = await getProfileImageUrl(
+            currentUserData.user_picture
+          );
+          // Tetapkan URL gambar ke state
+          setProfileImage(profileImageUrl);
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    getUserProfileList();
+  }, []);
+
+  // Fungsi untuk mendapatkan URL gambar dari Firebase Storage
+  const getProfileImageUrl = async (fileName) => {
+    try {
+      const imageUrl = await ref(
+        storage,
+        `userProfile/${fileName}`
+      ).getDownloadURL();
+      return imageUrl;
+    } catch (error) {
+      console.error("Error getting profile image URL: ", error);
+      return null;
     }
   };
 
@@ -181,6 +239,7 @@ export const Profil = () => {
 
           <label>Phone Number</label>
           <input
+            className="phone"
             type="tel"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
@@ -218,17 +277,25 @@ export const Profil = () => {
           <label>Birthdate</label>
           <div className="date">
             <input
+              className="phone"
               type="date"
               value={birthdate}
               onChange={(e) => setBirthdate(e.target.value)}
             />
           </div>
 
-          <button className="button-profil" onClick={onsubmitProfile}>
-            Save
-          </button>
-          <button className="button-profil" onClick={onUpdateProfile}>
-            update
+          <button
+            className="button-profil"
+            onClick={() => {
+              setIsLoading(true);
+              setTimeout(() => {
+                setIsLoading(false);
+                alert("Profil telah berhasil disimpan!");
+              }, 2000); // Contoh, waktu simulasi 2 detik
+            }}
+            disabled={isLoading} // Menonaktifkan tombol saat loading
+          >
+            {isLoading ? "Saving..." : "Save"}
           </button>
         </div>
 

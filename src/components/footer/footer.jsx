@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-column">
-        <a href="/">
+        <a href="/home">
           <img src={logo} alt="Logo" className="footer-logo" />
         </a>
       </div>

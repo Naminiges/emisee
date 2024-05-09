@@ -65,7 +65,7 @@ export const Galangdana = () => {
         email: email,
         Address: address,
       });
-      window.location.reload();
+      window.location.href = '/home';
     } catch (err) {
       console.log(err);
     }
@@ -162,7 +162,7 @@ export const Galangdana = () => {
             />
             <input
               type="date"
-              className="galangdana-input"
+              className="galangdana-dana"
               onChange={(e) => setBirthDate(e.target.value)}
               required // tambahkan required di sini
             />
@@ -224,7 +224,7 @@ export const Galangdana = () => {
             <div className="galangdana-label">Phone Number</div>
             <input
               type="tel"
-              className="galangdana-input"
+              className="galangdana-dana"
               placeholder="Write Here"
               onChange={(e) => setPhone(Number(e.target.value))}
               required // tambahkan required di sini
@@ -252,13 +252,8 @@ export const Galangdana = () => {
               required // tambahkan required di sini
             />
           </div>
-          <div className="galangdana-counter">0 / 1000</div>
-          <div className="galangdana-buttons">
-            <div className="galangdana-back">Back</div>
-            <div className="galangdana-next">Next</div>
-          </div>
-          <button onClick={onsubmitData} className="galangdana-save">
-            Exit and Save Changes
+          <button  onClick={() =>  window.location.href = '/home'} className="galangdana-save">
+          Save Changes
           </button>
         </div>
       </div>

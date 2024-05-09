@@ -30,9 +30,20 @@
 .main-donasi .wrapper .donate .org h5 {
   margin: 30px 0;
 }
-  .main-donasi .wrapper .donate .click {
+  .main-donasi .wrapper .donate .click1 {
     margin: 0 auto;
-    background-image: url("../../image/farm.jpg");
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEOhj1B4cgOD7GWKKLPMKSDnehoo5P8cd8ykiKOLZTng&s');    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .main-donasi .wrapper .donate .click2 {
+    margin: 0 auto;
+    background-image: url('https://cdn.pixabay.com/photo/2014/04/23/14/47/boy-330582_640.jpg');
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -41,6 +52,52 @@
     align-items: flex-end;
     border-radius: 10px 10px 0 0;
   }
+  .main-donasi .wrapper .donate .click3 {
+    margin: 0 auto;
+    background-image: url('https://distanbun.acehprov.go.id/media/2021.02/2023_Hortikultura.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 10px 10px 0 0;
+  }
+  .main-donasi .wrapper .donate .click4 {
+    margin: 0 auto;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJYnanWiezXF82_gg2l3nIcKp2cVlaEbGhqsGCItHJRg&s');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 10px 10px 0 0;
+  }
+  .main-donasi .wrapper .donate .click5 {
+    margin: 0 auto;
+    background-image: url('https://garuda.industry.co.id/uploads/berita/detail/51039.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 10px 10px 0 0;
+  }
+  .main-donasi .wrapper .donate .click6 {
+    margin: 0 auto;
+    background-image: url('https://dlh.semarangkota.go.id/wp-content/uploads/2021/02/kompas-com-2.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 10px 10px 0 0;
+  }
+
+
   .main-donasi .wrapper .donate .click button {
     background-color: #4BAF47;
     padding: 6px;

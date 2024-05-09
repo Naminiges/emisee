@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    height: 2200px;
+    height: 1200px;
     margin: 0 50px 0 50px;
     flex-direction: column;
     align-items: center;
@@ -15,10 +15,45 @@
 div {
     margin: 0;
 }
-.card .img {
+.card .img1 {
     width: 350px;
     height: 200px;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpt8UtKEBZM93wd_e0bOZWkBAzg_Kc9RNwrOYIjxO1JFnQ4Fse');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEOhj1B4cgOD7GWKKLPMKSDnehoo5P8cd8ykiKOLZTng&s');
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+.card .img2 {
+    width: 350px;
+    height: 200px;
+    background-image: url('https://cdn.pixabay.com/photo/2014/04/23/14/47/boy-330582_640.jpg');
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+.card .img3 {
+    width: 350px;
+    height: 200px;
+    background-image: url('https://distanbun.acehprov.go.id/media/2021.02/2023_Hortikultura.jpg');
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+.card .img4 {
+    width: 350px;
+    height: 200px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJYnanWiezXF82_gg2l3nIcKp2cVlaEbGhqsGCItHJRg&s');
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+.card .img5 {
+    width: 350px;
+    height: 200px;
+    background-image: url('https://garuda.industry.co.id/uploads/berita/detail/51039.jpg');
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+.card .img6 {
+    width: 350px;
+    height: 200px;
+    background-image: url('https://dlh.semarangkota.go.id/wp-content/uploads/2021/02/kompas-com-2.jpg');
     background-size: cover;
     border-radius: 10px 10px 0 0;
 }

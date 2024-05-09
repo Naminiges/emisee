@@ -91,6 +91,7 @@
   
   .galangdana-save {
     display: flex;
+    width : 730px;
     justify-content: center;
     align-items: center;
     padding: 10px 16px;
@@ -108,3 +109,13 @@
     color: white;
   }
   
+  .galangdana-dana {
+    width : 700px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    padding-left:10px ;
+    padding-right:15px ;
+    border-width: 1px;
+
+  }

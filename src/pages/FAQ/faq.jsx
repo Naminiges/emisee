@@ -1,12 +1,10 @@
 import React from "react";
-import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/footer";
 import "../../App.css";
 import "./faq.css";
 export const Faq = () => {
   return (
     <div>
-      <Navbar />
       <div className="container">
         <div className="top">
           <div>

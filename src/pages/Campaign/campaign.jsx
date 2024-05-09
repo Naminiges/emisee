@@ -16,19 +16,19 @@ export const Campaign = () => {
         <div className="wrapper">
             <div className="donate">
               <div className="org">
-                <div className="click">
+                <div className="click1">
                 <button className="org-button">Donasi Sekarang</button>
               </div>
                 <h5>Bantu Para Buruh Tani</h5>
                 </div>
               <div className="org">
-                <div className="click">
+                <div className="click2">
                 <button className="org-button">Donasi Sekarang</button>
               </div>
                 <h5>Pembelajaran Anak Usia Dini</h5>
                 </div>
               <div className="org">
-                <div className="click">
+                <div className="click3">
                 <button className="org-button">Donasi Sekarang</button>
               </div>
                 <h5>Perkembangan Buah dan Sayur</h5>
@@ -36,19 +36,19 @@ export const Campaign = () => {
             </div>
             <div className="donate">
               <div className="org">
-                <div className="click">
+                <div className="click4">
                 <button className="org-button">Donasi Sekarang</button>
               </div>
                 <h5>Menumbuhkan Padi Bebas Hama</h5>
                 </div>
               <div className="org">
-                <div className="click">
+                <div className="click5">
                 <button className="org-button">Donasi Sekarang</button>
               </div>
                 <h5>Pengelolaan Lahan Kering</h5>
                 </div>
               <div className="org">
-                <div className="click">
+                <div className="click6">
                 <button className="org-button">Donasi Sekarang</button>
               </div>
                 <h5>Pelestarian Pohon Mangrove</h5>

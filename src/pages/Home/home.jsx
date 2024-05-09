@@ -97,17 +97,17 @@ export const Index = () => {
           <div className="teman">
             <h1>Beberapa orang yang sudah menjadi #temanbaik</h1>
             <div className="orang">
-              <div className="org">
-                <div className="org-text">Mr. Pinus Popy</div>
+              <div className="org1">
+                <div className="org-text"></div>
               </div>
-              <div className="org">
-                <div className="org-text">Mr. Pinus Popy</div>
+              <div className="org2">
+                <div className="org-text"></div>
               </div>
-              <div className="org">
-                <div className="org-text">Mr. Pinus Popy</div>
+              <div className="org3">
+                <div className="org-text"></div>
               </div>
-              <div className="org">
-                <div className="org-text">Mr. Pinus Popy</div>
+              <div className="org4">
+                <div className="org-text"></div>
               </div>
             </div>
           </div>
