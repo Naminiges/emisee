@@ -93,6 +93,9 @@ export const Galangdana = () => {
     
     if (storedUser && storedUser.email) {
       setEmail(storedUser.email);
+    } else {
+      // Jika currentUser tidak ada, arahkan ke halaman /error
+      window.location.href = "/error";
     }
   }, []);
   return (

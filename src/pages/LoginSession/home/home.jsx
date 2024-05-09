@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbarlogin from "../../../components/navbarLogin/Navbarlogin";
 import Footer from "../../../components/footer/footer";
 import './home.css';
 
 export const Home = () => {
+  useEffect(() => {
+    // Ambil nilai username dan email dari local storage dan tetapkan ke state
+    const storedUser = JSON.parse(localStorage.getItem("currentUser"));
+    
+    if (!storedUser || !storedUser.email) {
+      // Jika currentUser tidak ada, arahkan ke halaman /error
+      window.location.href = "/error";
+    }
+  }, []);
+
   return (
     <div>
       <Navbarlogin />

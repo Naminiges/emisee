@@ -14,6 +14,7 @@ import { Home } from "./pages/LoginSession/home/home";
 import { Profil } from "./pages/LoginSession/profil/profil";
 import { Notifikasi } from "./pages/LoginSession/notifikasi/notifikasi";
 import { Faq } from "./pages/FAQ/faq";
+import ErrorPage from "./pages/errorPage";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/notifikasi" element={<Notifikasi />}></Route>
           <Route path="/profil" element={<Profil />}></Route>
           <Route path="/faq" element={<Faq />}></Route>
+          <Route path="/error" element={<ErrorPage />}></Route>
         </Routes>
       </Router>
     </div>
