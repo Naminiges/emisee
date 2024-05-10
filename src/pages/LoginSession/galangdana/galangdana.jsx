@@ -98,6 +98,7 @@ export const Galangdana = () => {
       window.location.href = "/error";
     }
   }, []);
+  
   return (
     <div>
       <Navbarlogin />
@@ -252,7 +253,7 @@ export const Galangdana = () => {
               required // tambahkan required di sini
             />
           </div>
-          <button  onClick={() =>  window.location.href = '/home'} className="galangdana-save">
+          <button  onClick={onsubmitData} className="galangdana-save">
           Save Changes
           </button>
         </div>
